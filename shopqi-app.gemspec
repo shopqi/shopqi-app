@@ -16,7 +16,13 @@ Gem::Specification.new do |s|
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
 
   s.add_dependency "rails", "~> 3.1.6"
+  s.add_dependency "omniauth-shopqi", "~> 0.1.0"
+  s.add_dependency "shopkit", "~> 0.1.0"
+  s.add_dependency "haml", "~> 3.1.6"
+
   # s.add_dependency "jquery-rails"
 
-  s.add_development_dependency "sqlite3"
+  # s.add_development_dependency "sqlite3"
+  s.add_development_dependency "rspec-rails", "~> 2.10.1"
+  #s.add_development_dependency "factory_girl_rails", "~> 3.5.0"
 end
