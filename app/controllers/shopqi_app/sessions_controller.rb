@@ -21,11 +21,11 @@ module ShopqiApp
       end
     end
 
-    def callback_login
+    def shopqi_login
       if signed_in?
-        redirect_to dashboard_path
+        redirect_to main_app.root_path
       else
-        redirect_to sessions_new_path(shop: params[:shop])
+        redirect_to login_path(shop: params[:shop])
       end
     end
 
