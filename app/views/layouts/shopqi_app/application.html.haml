@@ -1,0 +1,35 @@
+!!!
+%html
+  %head
+    %title ShopQi App Example
+    = stylesheet_link_tag    "application"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body
+    .navbar.navbar-fixed-top
+      .navbar-inner
+        .container
+          %a.brand(href="/") ShopQi App Example
+          -if current_shop
+            %ul.nav.pull-right
+              %li.dropdown
+                =link_to shop_url, class: 'dropdown-toggle', data: { toggle: :dropdown } do
+                  =current_shop['shopqi_domain']
+                  %b.caret
+                %ul.dropdown-menu
+                  %li
+                    =link_to shop_url, target: :_blank do
+                      %i.icon-home
+                      商店前台
+                  %li
+                    =link_to "#{shop_url}/admin", target: :_blank do
+                      %i.icon-cog
+                      商店后台
+                  %li.divider
+                  %li
+                    =link_to sign_out_path do
+                      %i.icon-off
+                      退出
+
+    #main.container
+      = yield
