@@ -31,7 +31,7 @@ module ShopqiApp
 
     def destroy
       session[:shopqi] = nil
-      redirect_to root_path
+      redirect_to main_app.root_path
     end
 
   end

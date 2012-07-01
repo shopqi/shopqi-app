@@ -73,4 +73,13 @@ describe ShopqiApp::SessionsController do
 
   end
 
+  context '#destroy' do
+
+    it 'should be success' do
+      put :destroy, use_route: :shopqi_app
+      response.should redirect_to("/")
+    end
+
+  end
+
 end
