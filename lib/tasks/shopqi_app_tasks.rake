@@ -1,4 +1,4 @@
 # desc "Explaining what the task does"
-# task :shopqi-app do
+# task :shopqi_app do
 #   # Task goes here
 # end
