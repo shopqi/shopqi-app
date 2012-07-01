@@ -5,6 +5,7 @@ ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../../spec/dummy/config/environment", __FILE__)
 require 'rspec/rails'
 require 'rspec/autorun'
+require 'omniauth'
 
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
@@ -32,3 +33,9 @@ RSpec.configure do |config|
   # rspec-rails.
   config.infer_base_class_for_anonymous_controllers = false
 end
+
+OmniAuth.config.test_mode = true
+OmniAuth.config.add_mock(:shopqi, {
+  credentials: { token: "1adbb120a55a012f24e3480aa969d9a6" },
+  extra: { raw_info: { shop: 'example.shopqi.com' } }
+})

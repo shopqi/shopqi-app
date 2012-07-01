@@ -14,10 +14,10 @@ module ShopqiApp
           access_token: data['credentials']['token'],
           shop: data['extra']['raw_info']['shop']
         }
-        redirect_to dashboard_path
+        redirect_to main_app.root_path
       else
         flash[:error] = "Could not log in to store."
-        redirect_to root_path
+        redirect_to login_path
       end
     end
 
