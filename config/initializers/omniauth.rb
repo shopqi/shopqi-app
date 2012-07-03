@@ -1,8 +1,8 @@
 Rails.application.config.middleware.use OmniAuth::Builder do
   provider :shopqi, 
-    SecretSetting.oauth.client_id, 
-    SecretSetting.oauth.secret,
-    :scope => SecretSetting.oauth.scope,
+    (SecretSetting.oauth.client_id rescue nil), # 调用 generator 时还没有 app_secret_config.yml 文件
+    (SecretSetting.oauth.secret rescue nil),
+    :scope => (SecretSetting.oauth.scope rescue nil),
     :callback_path => '/app/callback',
     :setup => lambda {|env| 
       params = Rack::Utils.parse_query(env['QUERY_STRING'])

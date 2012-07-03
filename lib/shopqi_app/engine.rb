@@ -8,5 +8,12 @@ module ShopqiApp
       g.integration_tool :rspec
     end
 
+
+    initializer "shopqi_app.helpers" do
+      ActiveSupport.on_load(:action_controller) do
+        include ShopqiApp::Helpers
+      end
+    end
   end
+
 end

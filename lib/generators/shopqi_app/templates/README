@@ -1,0 +1,12 @@
+===============================================================================
+
+There is something that you need to do before you use shopqi-app.
+
+Step 0.
+If you DO NOT use database, you MUST comment the line below in config/application.rb
+  # require "active_record/railtie"
+
+Step 1.
+  $ rails server
+
+===============================================================================

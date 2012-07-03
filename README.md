@@ -9,7 +9,7 @@
 
 ## 使用
 
-    $ rails g shopqi-app client_id client_secret
+    $ rails g shopqi_app client_id client_secret
 
 `client_id`, `client_secret` 在注册 Application 后显示，注册时 `REDIRECT URI` 填写 localhost:3000/app/callback
 

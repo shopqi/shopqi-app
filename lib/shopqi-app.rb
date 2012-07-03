@@ -7,4 +7,5 @@ require 'omniauth-shopqi'
 require 'shopkit'
 
 module ShopqiApp
+  autoload :Helpers, "shopqi_app/helpers"
 end
