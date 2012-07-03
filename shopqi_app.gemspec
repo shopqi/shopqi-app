@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.summary     = "ShopQi app engine."
   s.description = s.summary
 
-  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md"]
 
   s.add_dependency "rails", "~> 3.1.4"
   s.add_dependency "omniauth-shopqi", "~> 0.1.0"
