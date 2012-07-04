@@ -6,6 +6,6 @@ require 'settingslogic'
 require 'omniauth-shopqi'
 require 'shopkit'
 
-module ShopqiApp
+module ShopQiApp
   autoload :Helpers, "shopqi_app/helpers"
 end

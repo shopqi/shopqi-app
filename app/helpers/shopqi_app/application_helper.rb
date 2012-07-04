@@ -1,7 +1,7 @@
-module ShopqiApp
+module ShopQiApp
   module ApplicationHelper
     def authenticate_shop! # 必须通过认证
-      redirect_to root_path unless signed_in?
+      redirect_to main_app.root_path unless signed_in?
     end
 
     def signed_in?

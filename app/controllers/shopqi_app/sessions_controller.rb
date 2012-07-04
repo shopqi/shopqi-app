@@ -1,5 +1,6 @@
-module ShopqiApp
+module ShopQiApp
   class SessionsController < ApplicationController
+    skip_before_filter :authenticate_shop!, only: [:new, :create, :shopqi_login]
 
     def new
       if params[:shop].present?

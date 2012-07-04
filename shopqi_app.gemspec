@@ -6,7 +6,7 @@ require "shopqi_app/version"
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
   s.name        = "shopqi-app"
-  s.version     = ShopqiApp::VERSION
+  s.version     = ShopQiApp::VERSION
   s.authors     = ["saberma"]
   s.email       = ["mahb45@gmail.com"]
   s.homepage    = "https://github.com/saberma/shopqi-app"
@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md"]
 
-  s.add_dependency "rails", "~> 3.1.4"
+  s.add_dependency "rails", "~> 3.2.6"
   s.add_dependency "omniauth-shopqi", "~> 0.1.0"
   s.add_dependency "shopkit", "~> 0.1.0"
   s.add_dependency "haml", "~> 3.1.6"

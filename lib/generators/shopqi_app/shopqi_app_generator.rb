@@ -1,4 +1,4 @@
-class ShopqiAppGenerator < Rails::Generators::Base
+class ShopQiAppGenerator < Rails::Generators::Base
   source_root File.expand_path('../templates', __FILE__)
 
   argument :client_id    , type: :string, required: true
@@ -17,7 +17,7 @@ class ShopqiAppGenerator < Rails::Generators::Base
   end
 
   def add_routes
-    route "mount ShopqiApp::Engine => '/app'"
+    route "mount ShopQiApp::Engine => '/app'"
     route "root :to => 'home#index'"
   end
 

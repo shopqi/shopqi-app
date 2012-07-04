@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe ShopqiApp::SessionsController do
+describe ShopQiApp::SessionsController do
 
   let(:shop) { 'example.shopqi.com' }
 

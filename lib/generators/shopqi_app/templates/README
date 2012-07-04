@@ -7,6 +7,14 @@ If you DO NOT use database, you MUST comment the line below in config/applicatio
   # require "active_record/railtie"
 
 Step 1.
+UNCOMMENT the line below in Gemfile
+  gem 'therubyracer', :platforms => :ruby
+
+Step 2.
+  $ bundle
+
+
+Step 3.
   $ rails server
 
 ===============================================================================
