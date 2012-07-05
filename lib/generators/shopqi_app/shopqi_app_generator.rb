@@ -1,4 +1,5 @@
 class ShopQiAppGenerator < Rails::Generators::Base
+  namespace 'shopqi_app'
   source_root File.expand_path('../templates', __FILE__)
 
   argument :client_id    , type: :string, required: true
