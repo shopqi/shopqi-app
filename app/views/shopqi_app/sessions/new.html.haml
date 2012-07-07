@@ -3,6 +3,6 @@
     %h1
       安装应用
       %small 请输入商店 URL 地址
-  = form_tag login_path, :class => 'form-search' do
+  = form_tag main_app.login_path, :class => 'form-search' do
     = text_field_tag 'shop', nil, :placeholder => '商店 URL 地址', :class => 'btn-large', :id => 'shop'
     = submit_tag '安装', :class => 'btn btn-primary btn-large'

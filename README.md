@@ -11,7 +11,7 @@
 
     $ rails g shopqi_app client_id client_secret
 
-`client_id`, `client_secret` 在注册 Application 后显示，注册时 `REDIRECT URI` 填写 localhost:3000/app/callback
+`client_id`, `client_secret` 在注册 Application 后显示，注册时 `REDIRECT URI` 填写 localhost:3000/callback
 
 ## 配置
 
@@ -22,7 +22,7 @@
         client_id: 'dffd069fa92096022628a1f7eb174bc85d90278b8c90ec7ebadfbd94924bd2b8'
         secret: 'e1805141c81c496e4779371f41263c9f74ac2ffd3728302296b8af10b64d9c9b'
         scope: 'read_products read_orders'
-        redirect_uri: 'http://localhost:3000/app/callback'
+        redirect_uri: 'http://localhost:3000/callback'
 
 ## 最后
 

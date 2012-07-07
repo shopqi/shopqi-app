@@ -18,3 +18,4 @@ Example:
         app/views/home/
         app/views/layouts/application.html.haml
         config/app_secret_config.yml
+        db/migrate/create_shops.rb

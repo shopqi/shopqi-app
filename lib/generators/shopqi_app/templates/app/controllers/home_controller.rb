@@ -7,7 +7,7 @@ class HomeController < ApplicationController
       @orders = Shopkit.orders per_page: 3
       @products = Shopkit.products per_page: 5
     else
-      redirect_to shopqi_app.login_path
+      redirect_to login_path
     end
   end
 end

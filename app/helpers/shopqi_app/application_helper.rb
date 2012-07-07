@@ -5,15 +5,15 @@ module ShopQiApp
     end
 
     def signed_in?
-      session[:shopqi]
+      !cookies[:shop_id].blank?
     end
 
     def current_shop
-      session[:shopqi] && session[:shopqi][:shop]
+      @current_shop ||= (signed_in? && Shop.find(cookies[:shop_id]))
     end
 
     def shop_url
-      "http://#{current_shop['shopqi_domain']}"
+      "http://#{current_shop.shopqi_domain}"
     end
   end
 end

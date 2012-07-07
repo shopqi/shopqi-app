@@ -1,6 +1,6 @@
 module ShopQiApp
   class SessionsController < ApplicationController
-    skip_before_filter :authenticate_shop!, only: [:new, :create, :shopqi_login]
+    skip_before_filter :authenticate_shop!, only: [:new, :shopqi_login]
 
     def new
       if params[:shop].present?
@@ -8,32 +8,17 @@ module ShopQiApp
       end
     end
 
-    def create
-      if data = request.env['omniauth.auth']
-        session[:shopqi] = { 
-          url: params[:shop],
-          access_token: data['credentials']['token'],
-          shop: data['extra']['raw_info']['shop']
-        }
-        redirect_to main_app.root_path
-      else
-        flash[:error] = "Could not log in to store."
-        redirect_to login_path
-      end
-    end
-
     def shopqi_login
       if signed_in?
         redirect_to main_app.root_path
       else
-        redirect_to login_path(shop: params[:shop])
+        redirect_to main_app.login_path(shop: params[:shop])
       end
     end
 
     def destroy
-      session[:shopqi] = nil
+      cookies[:shop_id] = nil
       redirect_to main_app.root_path
     end
-
   end
 end

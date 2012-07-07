@@ -8,4 +8,8 @@ require 'shopkit'
 
 module ShopQiApp
   autoload :Helpers, "shopqi_app/helpers"
+
+  module Rails
+    autoload :Routes, "shopqi_app/rails/routes"
+  end
 end
