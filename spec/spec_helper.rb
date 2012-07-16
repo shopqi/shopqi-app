@@ -1,3 +1,4 @@
+#encoding: utf-8
 # http://whilefalse.net/2012/01/25/testing-rails-engines-rspec/
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 ENV["RAILS_ENV"] ||= 'test'
@@ -40,6 +41,7 @@ OmniAuth.config.add_mock(:shopqi, {
     raw_info: {
       shop: {
         id: 1,
+        name: '测试商店',
         domain: 'example.shopqi.com',
         shopqi_domain: 'example.shopqi.com' } } }
 } )

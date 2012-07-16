@@ -1,4 +1,4 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  helper ShopQiApp::ApplicationHelper
+  prepend_before_filter :authenticate_shop!
 end
