@@ -17,7 +17,7 @@ module ShopQiApp
     end
 
     def destroy
-      cookies[:shop_id] = nil
+      cookies.delete(:shop_id)
       redirect_to main_app.root_path
     end
   end

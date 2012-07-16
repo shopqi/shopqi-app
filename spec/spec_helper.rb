@@ -36,5 +36,10 @@ end
 OmniAuth.config.test_mode = true
 OmniAuth.config.add_mock(:shopqi, {
   credentials: { token: "1adbb120a55a012f24e3480aa969d9a6" },
-  extra: { raw_info: { shop: 'example.shopqi.com' } }
-})
+  extra: {
+    raw_info: {
+      shop: {
+        id: 1,
+        domain: 'example.shopqi.com',
+        shopqi_domain: 'example.shopqi.com' } } }
+} )

@@ -5,11 +5,11 @@ module ShopQiApp
     end
 
     def signed_in?
-      !cookies[:shop_id].blank?
+      !cookies.signed[:shop_id].blank?
     end
 
     def current_shop
-      @current_shop ||= (signed_in? && Shop.find(cookies[:shop_id]))
+      @current_shop ||= (signed_in? && Shop.find(cookies.signed[:shop_id]))
     end
 
     def shop_url

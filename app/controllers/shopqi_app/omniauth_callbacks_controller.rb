@@ -17,7 +17,7 @@ module ShopQiApp
     end
 
     def sign_in_and_redirect(shop)
-      cookies.permanent[:shop_id] = shop.id
+      cookies.permanent.signed[:shop_id] = shop.id
       redirect_to main_app.root_path
     end
 

@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  mount ShopQiApp::Engine => "/app"
+  use_shopqi
   root to: 'home#index'
 end
