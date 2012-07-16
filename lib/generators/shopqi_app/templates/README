@@ -9,8 +9,10 @@ UNCOMMENT the line below in Gemfile
 Step 2.
   $ bundle
 
-
 Step 3.
+  $ rake db:create db:migrate
+
+Step 4.
   $ rails server
 
 ===============================================================================
