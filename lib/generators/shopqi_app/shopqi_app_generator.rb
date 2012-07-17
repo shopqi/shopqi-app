@@ -13,10 +13,6 @@ class ShopQiAppGenerator < Rails::Generators::Base
     template 'config/app_secret_config.yml.erb', 'config/app_secret_config.yml'
   end
 
-  def install_migration
-    migration_template 'db/migrate/create_shops.rb', 'db/migrate/create_shops.rb'
-  end
-
   def remove_files
     remove_file 'public/index.html'
     remove_file 'app/assets/javascripts/application.js'
@@ -27,6 +23,10 @@ class ShopQiAppGenerator < Rails::Generators::Base
   def add_routes
     route "use_shopqi"
     route "root :to => 'home#index'"
+  end
+
+  def install_migration
+    migration_template 'db/migrate/create_shops.rb', 'db/migrate/create_shops.rb'
   end
 
   def show
