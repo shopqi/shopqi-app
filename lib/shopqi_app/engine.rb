@@ -3,6 +3,10 @@ module ShopQiApp
     isolate_namespace ShopQiApp
     engine_name 'shopqi_app'
 
+    def models_dir
+      root.join 'app', 'models'
+    end
+
     config.generators do |g|                                                               
       g.template_engine :haml
       g.test_framework :rspec, :views => false
