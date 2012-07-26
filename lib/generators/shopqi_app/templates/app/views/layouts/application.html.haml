@@ -1,7 +1,7 @@
 !!!
 %html
   %head
-    %title ShopQi App Example
+    %title=SecretSetting.app_name
     = stylesheet_link_tag    "application"
     = javascript_include_tag "application"
     = csrf_meta_tags
@@ -9,7 +9,7 @@
     .navbar.navbar-fixed-top
       .navbar-inner
         .container
-          %a.brand(href="/") ShopQi App Example
+          %a.brand(href="/")=SecretSetting.app_name
           -if current_shop
             %ul.nav.pull-right
               %li.dropdown
@@ -31,5 +31,13 @@
                       %i.icon-off
                       退出
 
-    #main.container
-      = yield
+    .container
+      #main
+        = yield
+      #footer.footer
+        %p
+          ==Copyright©#{Date.today.year}
+          =link_to SecretSetting.app_name, '/'
+          版权所有
+          |
+          =SecretSetting.domain.record
