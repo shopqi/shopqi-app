@@ -7,4 +7,8 @@ class Shop < ActiveRecord::Base
     shop.access_token = data.credentials.token
     shop.tap(&:save)
   end
+
+  def use_shopkit
+    Shopkit.setup url: self.shopqi_domain, access_token: self.access_token
+  end
 end
