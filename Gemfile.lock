@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    shopqi-app (0.2.7)
+    shopqi-app (0.2.8)
       bootstrap-sass (~> 2.0.4.0)
       haml (~> 3.1.6)
       omniauth-shopqi (~> 0.1.0)
