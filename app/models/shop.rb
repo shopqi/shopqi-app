@@ -13,10 +13,10 @@ class Shop < ActiveRecord::Base
   end
 
   def admin_url # 后台
-    "#{SecretSetting.shopqi_domain.protocol}#{shop.shopqi_domain}/admin"
+    "#{SecretSetting.shopqi_domain.protocol}#{self.shopqi_domain}/admin"
   end
 
   def front_url # 前台
-    "http://#{shop.shopqi_domain}"
+    "http://#{self.shopqi_domain}"
   end
 end
