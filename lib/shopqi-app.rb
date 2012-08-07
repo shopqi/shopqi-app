@@ -1,6 +1,6 @@
 require "shopqi_app/engine"
 require 'haml' # fixed haml: Missing template
-require 'less-rails-bootstrap'
+require 'bootstrap-sass'
 require 'omniauth'
 require 'settingslogic'
 require 'omniauth-shopqi'

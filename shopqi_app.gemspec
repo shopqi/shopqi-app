@@ -19,7 +19,7 @@ Gem::Specification.new do |s|
   s.add_dependency "omniauth-shopqi", "~> 0.1.0"
   s.add_dependency "shopkit", "~> 0.1.0"
   s.add_dependency "haml", "~> 3.1.6"
-  s.add_dependency "less-rails-bootstrap", "~> 2.0.13"
+  s.add_dependency "bootstrap-sass", "~> 2.0.4.0"
   s.add_dependency "settingslogic", "~> 2.0.8"
 
   # s.add_dependency "jquery-rails"

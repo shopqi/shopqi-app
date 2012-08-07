@@ -1,0 +1,71 @@
+/*
+ *= require_tree . 
+ */
+
+// CSS Reset
+@import "bootstrap/reset";
+
+// Core variables and mixins
+@import "bootstrap/variables"; // Modify this for custom colors, font-sizes, etc
+@import "bootstrap/mixins";
+
+// Grid system and page structure
+@import "bootstrap/scaffolding";
+@import "bootstrap/grid";
+@import "bootstrap/layouts";
+
+// Base CSS
+@import "bootstrap/type";
+//@import "bootstrap/code";
+@import "bootstrap/forms";
+@import "bootstrap/tables";
+
+// Components: common
+@import "bootstrap/sprites";
+@import "bootstrap/dropdowns";
+@import "bootstrap/wells";
+@import "bootstrap/component-animations";
+//@import "bootstrap/close";
+
+// Components: Buttons & Alerts
+@import "bootstrap/buttons";
+//@import "bootstrap/button-groups";
+@import "bootstrap/alerts"; // Note: alerts share common CSS with buttons and thus have styles in buttons
+
+// Components: Nav
+@import "bootstrap/navs";
+@import "bootstrap/navbar";
+//@import "bootstrap/breadcrumbs";
+//@import "bootstrap/pagination";
+//@import "bootstrap/pager";
+
+// Components: Popovers
+//@import "bootstrap/modals";
+@import "bootstrap/tooltip";
+//@import "bootstrap/popovers";
+
+// Components: Misc
+//@import "bootstrap/thumbnails";
+@import "bootstrap/labels-badges";
+//@import "bootstrap/progress-bars";
+@import "bootstrap/accordion";
+//@import "bootstrap/carousel";
+@import "bootstrap/hero-unit";
+
+// Utility classes
+@import "bootstrap/utilities"; // Has to be last to override when necessary
+
+body {
+  margin-top: 50px;
+  margin-bottom: 100px; }
+
+.accordion-body {
+  background: #F9F9F9;
+  .accordion-inner {
+    padding: 20px; }}
+
+.footer {
+  color: #333;
+  text-align: center;
+  margin-top: 45px;
+  padding: 35px 0 36px; }

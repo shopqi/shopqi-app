@@ -2,12 +2,12 @@
 #= require jquery_ujs
 #= require_tree .
 
-#= require twitter/bootstrap/dropdown.js
+#= require bootstrap-dropdown
 # accordion 依赖
-#= require twitter/bootstrap/transition.js
-#= require twitter/bootstrap/collapse.js
+#= require bootstrap-transition
+#= require bootstrap-collapse
 ###
-#= require twitter/bootstrap/tooltip.js
+#= require bootstrap-tooltip
 ###
 
 $(document).ready ->
